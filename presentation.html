@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->  <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	
+	<title>SpaceHunter - The App</title>
+	
+	<meta name="description" content="A jQuery library for modern HTML presentations">
+	<meta name="author" content="Caleb Troughton">
+	<meta name="viewport" content="width=1024, user-scalable=no">
+	
+	<!-- Core and extension CSS files -->
+	<link rel="stylesheet" href="css/deck.core.css">
+	<link rel="stylesheet" href="css/deck.goto.css">
+	<link rel="stylesheet" href="css/deck.menu.css">
+	<link rel="stylesheet" href="css/deck.navigation.css">
+	<link rel="stylesheet" href="css/deck.status.css">
+	<link rel="stylesheet" href="css/deck.hash.css">
+	
+	<!-- Theme CSS files (menu swaps these out) -->
+	<link rel="stylesheet" id="style-theme-link" href="css/neon.css">
+	<link rel="stylesheet" id="transition-theme-link" href="css/horizontal-slide.css">
+
+  <!-- Highlight Syntax highlighting -->
+  <link rel="stylesheet" href="css/sunburst.css">
+	
+	<!-- Custom CSS just for this page -->
+	<link rel="stylesheet" href="presentation.css">
+	
+	<script src="scripts/modernizr.custom.js"></script>
+</head>
+
+<body class="deck-container">
+
+<section class="slide" id="title-slide">
+	<h1>SpaceHunter<br>-<br>The App</h1>
+</section>
+
+<section class="slide" id="agenda">
+	<h2>Agenda</h2>
+  <ul>
+    <font size="40px">
+    <li class="slide">Motivation and Background</li>
+    <li class="slide">Application Architecture</li>
+    <li class="slide">JavaScript Client Architecture</li>
+    <li class="slide">Test Driven Development</li>
+    <li class="slide">Demo</li>
+    </font>
+  </ul>
+</section>
+
+<section class="slide" id="motivation">
+  <h2>Motivation and Background</h2>
+  <p>&nbsp;</p>
+  <img src="images/motivation.png">
+  <p class="slide"> + Learning JavaScript on a fun project </p>
+</section>
+
+<section class="slide" id="architecture">
+  <h2>Architecture</h2>
+    <img src="images/architecture.png">
+  
+</section>  
+
+<section class="slide" id="server">
+  <h2>Client/Server API</h2>
+  <img src="images/server_api.png">
+</section>
+
+<section class="slide" id="internal-architecture">
+  <h2>JavaScript Client Architecture</h2>
+  <p>&nbsp;</p>
+  <img src="images/client-architecture.png">
+</section>
+
+<section class="slide" id="dsl">
+  <h2>Workstation DSL</h2>
+  <ul id="menu-css">
+    <li id="menu-jquery"><a href="workstation_demo.html">Run</a></li>
+  </ul>
+  <pre><code class="javascript">
+<span class="symbol">app</span>(function() {
+  <span class="symbol">screen</span>("Hello World", function() {
+    <span class="symbol">label</span>({ text: "Name" });
+    <span class="symbol">textbox</span>({ id: "txtName" });
+    <span class="symbol">button</span>({ text: "Say hello ...", 
+      onclick: function() {
+        <span class="keyword">alert</span>("Hello, " 
+        + this.getWidgetById("txtName").text);
+      } 
+    });
+  });
+}); 
+  </code></pre>
+</section>
+
+<section class="slide" id="runtime">
+  <h2>Workstation Runtime</h2>
+  <p>&nbsp;</p>
+  <a href="http://jquerymobile.com"><img src="images/jquery-logo.png" width="600"></a>
+  <p>&nbsp;</p>
+  <p class="center-both"><a href="http://jquerymobile.com">http://jquerymobile.com</a></p>
+</section>
+
+<section class="slide" id="jqm">
+  <h2>jQuery Mobile Example</h2>
+  <ul id="menu-css">
+    <li id="menu-jquery"><a href="jquerymobile.html">Run</a></li>
+  </ul>
+  <pre><code class="html">
+&lt;div data-role="page"&gt;
+  &lt;div data-role="header"&gt;
+    &lt;h1&gt;Page Title&lt;/h1&gt;
+  &lt;/div&gt;&lt;!-- /header --&gt;
+  &lt;div data-role="content"&gt;	
+    &lt;p&gt;Page content goes here.&lt;/p&gt;		
+  &lt;/div&gt;&lt;!-- /content --&gt;
+  &lt;div data-role="footer"&gt;
+    &lt;h4&gt;Page Footer&lt;/h4&gt;
+  &lt;/div&gt;&lt;!-- /footer --&gt;
+&lt;/div&gt;&lt;!-- /page --&gt;
+  </code></pre>
+</section>
+
+<section class="slide" id="tdd">
+  <h2>Test Driven Development</h2>
+  <p>&nbsp;</p>
+  <a href="http://pivotal.github.com/jasmine/"><img src="images/jasmine_logo.png" width="600"></a>
+  <p>&nbsp;</p>
+  <p class="center-both"><a href="http://pivotal.github.com/jasmine/">http://pivotal.github.com/jasmine/</a></p>
+</section>
+
+<section class="slide" id="demo">
+  <h1>Demo</h1>
+</section>
+
+<section class="slide" id="try-it">
+  <h2>Try it yourself!</h2>
+  <p class="center-both"><font size="40px"><a href="http://spacehunter.heroku.com">http://spacehunter.heroku.com</a></font></p>
+  <p class="center-both">Continuously updated as we develop more functionality!</p>
+  <p class="center-both">Code on GitHub: <font size="40px"><a href="https://github.com/Statoil/SpaceHunterApp">https://github.com/Statoil/SpaceHunterApp</a></font></p>
+  <p class="center-both">Create your account on GitHub and send your github accountname to me (joe@statoil.com)!</p>
+</section>
+
+<!-- 
+<a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+<a href="#" class="deck-next-link" title="Next">&#8594;</a>
+-->
+
+<p class="deck-status">
+	<span class="deck-status-current"></span>
+	/
+	<span class="deck-status-total"></span>
+</p>
+
+<script src="scripts/jquery-1.7.min.js"></script>
+<script src="scripts/workstation.js"></script>
+<script src="scripts/workstation.browser.js"></script>
+
+<!-- Deck Core and extensions -->
+<script src="scripts/deck.core.js"></script>
+<script src="scripts/deck.hash.js"></script>
+<script src="scripts/deck.menu.js"></script>
+<script src="scripts/deck.goto.js"></script>
+<script src="scripts/deck.status.js"></script>
+<script src="scripts/deck.navigation.js"></script>
+
+<!-- Highligh syntax highlighting framework -->
+<script src="scripts/highlight.pack.js"></script>
+
+<!-- Specific to this page -->
+<script src="presentation.js"></script>
+
+</body>
+</html>

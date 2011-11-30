@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="scripts/jquery-1.7.min.js"></script>
+		<script src="scripts/workstation.js"></script>
+		<script src="scripts/workstation.browser.js"></script>
+		
+		<script>
+			function init() {
+        app(function() {
+          screen("Hello World", function() {
+            label({ text: "Name", style: { top: 10, left: 20 } });
+            textbox({ id: "txtName", style: { top: 8, left: 100 } });
+            button({ 
+              text: "Say hello ...", 
+              style: { top: 70, left: 178 },
+              onclick: function() {
+                alert("Hello, " + workstation.ast().getScreen(0).getWidget(1).runtime.text());
+              } 
+            });
+          });
+        }); 
+      }		
+    </script>
+	</head>
+	<body onload="init();">
+	</body>
+</html>
